@@ -73,7 +73,7 @@ function ConsentContent() {
         // Show consent screen - don't auto-redirect even if consent was given before
         setAuthDetails({
           client: data?.client,
-          scopes: data?.scopes || ["openid", "email", "profile"],
+          scopes: data?.scope?.split(" ") || ["openid", "email", "profile"],
         });
       } catch (err) {
         console.error("Failed to initialize auth:", err);
