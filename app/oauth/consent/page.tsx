@@ -109,8 +109,8 @@ function ConsentContent() {
         throw result.error;
       }
 
-      if (result.data?.redirect_uri) {
-        window.location.href = result.data.redirect_uri;
+      if (result.data?.redirect_url) {
+        window.location.href = result.data.redirect_url;
       }
     } catch (err) {
       setError(
